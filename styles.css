@@ -143,36 +143,93 @@ h1 {
 /* 响应式设计 */
 @media (max-width: 600px) {
     .invitation-card {
-        padding: 1.8rem;
+        padding: 1.8rem 1.5rem;
+        width: 85%;
+        margin: 1rem;
     }
 
     h1 {
         font-size: 1.3rem;
+        letter-spacing: 2px;
+        margin-bottom: 1.5rem;
     }
 
     .main-text {
         font-size: 1.1rem;
+        letter-spacing: 1px;
+        margin-bottom: 1.5rem;
     }
-} 
 
-.message {
-    margin: 1.8rem 0;
-    font-size: 0.95rem;
-    line-height: 2;
-    color: rgba(212, 175, 55, 0.9);
+    .greeting {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .message {
+        font-size: 0.9rem;
+        line-height: 1.8;
+        margin: 1.5rem 0;
+    }
+
+    .message p {
+        margin: 0.6rem 0;
+    }
+
+    .details {
+        margin: 1.5rem 0;
+        padding: 0.8rem 0;
+    }
+
+    .details p {
+        margin: 0.4rem 0;
+        font-size: 0.9rem;
+    }
+
+    .venue-note {
+        font-size: 0.85rem;
+    }
+
+    .rsvp {
+        margin-top: 1.5rem;
+    }
+
+    .rsvp p {
+        font-size: 0.9rem;
+    }
+
+    .host {
+        margin: 1.2rem 0;
+    }
+
+    .host-name {
+        font-size: 1.1rem;
+    }
+
+    .host-title {
+        font-size: 0.85rem;
+    }
+
+    .rsvp-contact {
+        font-size: 0.85rem;
+    }
 }
 
-.message p {
-    margin: 0.8rem 0;
-}
+/* 添加更小屏幕的适配 */
+@media (max-width: 350px) {
+    .invitation-card {
+        padding: 1.5rem 1.2rem;
+    }
 
-.venue-note {
-    font-size: 0.9rem;
-    color: rgba(212, 175, 55, 0.7);
-    margin-top: 0.5rem;
-}
+    h1 {
+        font-size: 1.2rem;
+    }
 
-.details p {
-    margin: 0.5rem 0;
+    .main-text {
+        font-size: 1rem;
+    }
+
+    .message {
+        font-size: 0.85rem;
+    }
 }
   
