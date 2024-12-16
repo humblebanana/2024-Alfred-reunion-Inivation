@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Noto+Serif+SC:wght@400;700&display=swap');
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #0a0a0f;
+    font-family: 'Noto Serif SC', serif;
+    position: relative;
+    overflow: hidden;
+}
+
+/* 星空背景 */
+.stars {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+/* 创建多层星星 */
+.stars::before,
+.stars::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        radial-gradient(2px 2px at 20px 30px, #fff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 40px 70px, #fff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 50px 160px, #fff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 90px 40px, #fff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 130px 80px, #fff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 160px 120px, #fff, rgba(0,0,0,0));
+    background-repeat: repeat;
+    background-size: 200px 200px;
+    animation: twinkle 4s infinite;
+}
+
+.stars::after {
+    background-size: 300px 300px;
+    animation: twinkle 6s infinite;
+    opacity: 0.5;
+}
+
+@keyframes twinkle {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-100px);
+    }
+}
+
+/* 添加流星效果 */
+@keyframes shooting-star {
+    0% {
+        transform: translateX(0) translateY(0) rotate(-45deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(-500px) translateY(500px) rotate(-45deg);
+        opacity: 0;
+    }
+}
+
+.stars::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100px;
+    height: 1px;
+    background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 50%, rgba(255,255,255,0) 100%);
+    animation: shooting-star 5s infinite;
+    animation-delay: 3s;
+}
+
+.invitation-card {
+    background: linear-gradient(145deg, rgba(26, 26, 46, 0.9), rgba(22, 33, 62, 0.9));
+    backdrop-filter: blur(10px);
+    padding: 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    text-align: center;
+    color: #d4af37;
+    max-width: 400px;
+    width: 90%;
+    position: relative;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 1.8rem;
+    margin-bottom: 1.8rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(45deg, #d4af37, #f4e5aa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.content {
+    line-height: 1.8;
+}
+
+.greeting {
+    font-size: 1.1rem;
+    margin-bottom: 1.8rem;
+}
+
+.main-text {
+    font-size: 1.3rem;
+    margin-bottom: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.details {
+    margin: 2rem 0;
+    padding: 1rem 0;
+    border-top: 1px solid rgba(212, 175, 55, 0.3);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+.rsvp {
+    margin-top: 2rem;
+}
+
+.rsvp-contact {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* 响应式设计 */
+@media (max-width: 600px) {
+    .invitation-card {
+        padding: 1.8rem;
+    }
+
+    h1 {
+        font-size: 1.3rem;
+    }
+
+    .main-text {
+        font-size: 1.1rem;
+    }
+} 
+
+.message {
+    margin: 1.8rem 0;
+    font-size: 0.95rem;
+    line-height: 2;
+    color: rgba(212, 175, 55, 0.9);
+}
+
+.message p {
+    margin: 0.8rem 0;
+}
+
+.venue-note {
+    font-size: 0.9rem;
+    color: rgba(212, 175, 55, 0.7);
+    margin-top: 0.5rem;
+}
+
+.details p {
+    margin: 0.5rem 0;
+}
+  
