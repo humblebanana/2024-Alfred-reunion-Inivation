@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Noto+Serif+SC:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Noto+Serif+SC:wght@300;400;700&family=Noto+Sans+SC:wght@300;400;500&family=Cormorant+Garamond:wght@500;600&display=swap');
 
 body {
     margin: 0;
@@ -273,6 +273,70 @@ h1 {
     .details {
         margin: 0.8rem 0;
         padding: 0.6rem 0;
+    }
+}
+
+/* 添加新的字体 */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Noto+Serif+SC:wght@300;400;700&family=Noto+Sans+SC:wght@300;400;500&family=Cormorant+Garamond:wght@500;600&display=swap');
+
+/* 修改主人名字样式 */
+.host {
+    margin: 1.5rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.host-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+    background: linear-gradient(45deg, #d4af37, #f4e5aa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    position: relative;
+    padding: 0 10px;
+}
+
+.host-name::before,
+.host-name::after {
+    content: '✦';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.8rem;
+    color: rgba(212, 175, 55, 0.6);
+}
+
+.host-name::before {
+    left: -15px;
+}
+
+.host-name::after {
+    right: -15px;
+}
+
+.host-title {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: rgba(212, 175, 55, 0.8);
+    letter-spacing: 2px;
+}
+
+/* 在移动端的调整 */
+@media (max-width: 600px) {
+    .host-name {
+        font-size: 1.2rem;
+        letter-spacing: 2px;
+    }
+
+    .host-name::before,
+    .host-name::after {
+        font-size: 0.7rem;
     }
 }
   
