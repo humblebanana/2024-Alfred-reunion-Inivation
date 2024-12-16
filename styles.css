@@ -9,7 +9,8 @@ body {
     background: #0a0a0f;
     font-family: 'Noto Serif SC', serif;
     position: relative;
-    overflow: hidden;
+    overflow-x: hidden;
+    padding: 20px 0;
 }
 
 /* 星空背景 */
@@ -142,94 +143,136 @@ h1 {
 
 /* 响应式设计 */
 @media (max-width: 600px) {
-    .invitation-card {
-        padding: 1.8rem 1.5rem;
-        width: 85%;
-        margin: 1rem;
+    body {
+        align-items: flex-start;
+        padding: 20px 0;
+        min-height: auto;
     }
 
-    h1 {
-        font-size: 1.3rem;
-        letter-spacing: 2px;
-        margin-bottom: 1.5rem;
+    .stars {
+        position: fixed;
     }
 
-    .main-text {
-        font-size: 1.1rem;
-        letter-spacing: 1px;
-        margin-bottom: 1.5rem;
-    }
-
-    .greeting {
-        font-size: 1rem;
-        margin-bottom: 1.5rem;
-    }
-
-    .message {
-        font-size: 0.9rem;
-        line-height: 1.8;
-        margin: 1.5rem 0;
-    }
-
-    .message p {
-        margin: 0.6rem 0;
-    }
-
-    .details {
-        margin: 1.5rem 0;
-        padding: 0.8rem 0;
-    }
-
-    .details p {
-        margin: 0.4rem 0;
-        font-size: 0.9rem;
-    }
-
-    .venue-note {
-        font-size: 0.85rem;
-    }
-
-    .rsvp {
-        margin-top: 1.5rem;
-    }
-
-    .rsvp p {
-        font-size: 0.9rem;
-    }
-
-    .host {
-        margin: 1.2rem 0;
-    }
-
-    .host-name {
-        font-size: 1.1rem;
-    }
-
-    .host-title {
-        font-size: 0.85rem;
-    }
-
-    .rsvp-contact {
-        font-size: 0.85rem;
-    }
-}
-
-/* 添加更小屏幕的适配 */
-@media (max-width: 350px) {
     .invitation-card {
         padding: 1.5rem 1.2rem;
+        width: 82%;
+        margin: 10px auto;
+        max-height: none;
+        font-size: 0.9rem;
     }
 
     h1 {
         font-size: 1.2rem;
+        letter-spacing: 1px;
+        margin-bottom: 1.2rem;
+    }
+
+    .greeting {
+        font-size: 0.95rem;
+        margin-bottom: 1rem;
     }
 
     .main-text {
         font-size: 1rem;
+        letter-spacing: 1px;
+        margin-bottom: 1rem;
+        line-height: 1.4;
     }
 
     .message {
         font-size: 0.85rem;
+        line-height: 1.5;
+        margin: 1rem 0;
+    }
+
+    .message p {
+        margin: 0.4rem 0;
+    }
+
+    .details {
+        margin: 1rem 0;
+        padding: 0.8rem 0;
+    }
+
+    .details p {
+        margin: 0.3rem 0;
+        font-size: 0.85rem;
+    }
+
+    .venue-note {
+        font-size: 0.8rem;
+        margin-top: 0.3rem;
+    }
+
+    .rsvp {
+        margin-top: 1rem;
+    }
+
+    .rsvp p {
+        font-size: 0.85rem;
+        margin: 0.3rem 0;
+    }
+
+    .host {
+        margin: 0.8rem 0;
+    }
+
+    .host-name {
+        font-size: 1rem;
+    }
+
+    .host-title {
+        font-size: 0.8rem;
+    }
+
+    .rsvp-contact {
+        font-size: 0.8rem;
+        margin-top: 0.5rem;
+    }
+}
+
+/* 超小屏幕的特殊处理 */
+@media (max-width: 320px) {
+    .invitation-card {
+        padding: 1.2rem 1rem;
+        width: 85%;
+    }
+
+    h1 {
+        font-size: 1.1rem;
+    }
+
+    .main-text {
+        font-size: 0.95rem;
+    }
+
+    .message {
+        font-size: 0.8rem;
+    }
+
+    .details p,
+    .rsvp p {
+        font-size: 0.8rem;
+    }
+}
+
+/* 处理较矮的屏幕 */
+@media (max-height: 600px) {
+    body {
+        padding: 15px 0;
+    }
+
+    .invitation-card {
+        padding: 1.2rem 1rem;
+    }
+
+    .message p {
+        margin: 0.3rem 0;
+    }
+
+    .details {
+        margin: 0.8rem 0;
+        padding: 0.6rem 0;
     }
 }
   
